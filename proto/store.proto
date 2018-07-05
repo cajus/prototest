@@ -1,0 +1,22 @@
+syntax = "proto3";
+package pb;
+
+message Parameter {
+    string name = 1;
+    oneof value {
+        string json_value = 2;
+        string str_value = 3;
+        int32 int_value = 4;
+        bool bool_value = 5;
+        float float_value = 6;
+    }
+}
+
+message ParameterSet {
+    bytes raw = 1;
+    repeated Parameter parameters = 2;
+}
+
+message ParameterSets {
+    map<string,ParameterSet> sets = 1;
+}
