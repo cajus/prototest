@@ -3,7 +3,7 @@ package main
 import (
     "fmt"
     "github.com/gogo/protobuf/jsonpb"
-    "github.com/cajus/nixgeht/proto"
+    "github.com/cajus/prototest/proto"
     "strings"
 )
 
